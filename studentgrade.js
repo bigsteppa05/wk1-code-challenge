@@ -1,4 +1,7 @@
 // studentgrade.js
+const prompt = require("prompt-sync")({sigint: true});
+const grade = prompt("Enter the mark of the student: ");
+
 function gradeForMark(mark) {
 // check if mark is between 0 and 100
     if (mark > 79 && mark <= 100) {
@@ -15,13 +18,6 @@ function gradeForMark(mark) {
       return "Invalid input: Mark should be between 0 and 100";// Invalid input
     }
   }
-  
-  // Prompt user for input
-  const inputMarks = window.prompt("Enter a student's mark between 0 and 100.");
-  // Convert input to integer
-  const mark = parseInt(inputMarks);
-  // Call gradeForMark function
-  const grade = gradeForMark(mark);
-  // Display result
-  console.log("Grade:", grade);
-  
+  // console.log(gradeForMark(grade));
+  console.log(gradeForMark(grade));
+    

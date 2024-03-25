@@ -1,17 +1,33 @@
+// speeddetector.js
+const prompt = require("prompt-sync")({sigint: true});
 
-const speed = 80;// example of a speed
+const speed = prompt("Enter the speed of the car: ");
 const speedLimit = 70;
-const kmPerDemeritPoint = 5;
-// calculate the number of demerit points
-if (speed < speedLimit + kmPerDemeritPoint) {
-    console.log("OK");
-}
-else {
-    const demeritPoints = Math.floor((speed - speedLimit) / kmPerDemeritPoint);
-    if (demeritPoints >= 12) {
-        console.log("License Suspended.");// license suspended
+// console.log(speedDetector(speed));
+ function speedDetector() {
+    if (speed <= speedLimit) {
+        return "Ok";
+    } else {
+        const points = (speed - speedLimit) / 5;
+        if (points<=12) {
+            return points
+        }
+        else if (points > 12) {
+            return "License suspended";
+        }
+    
     }
-    else {
-        console.log(`Points: ${demeritPoints}`);// demerit points
-    }
 }
+// console.log(speedDetector(speed));
+console.log(speedDetector(speed));
+                
+
+        
+    
+    
+    
+    
+    
+        
+    
+ 

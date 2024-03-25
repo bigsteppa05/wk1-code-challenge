@@ -1,3 +1,6 @@
+const prompt = require("prompt-sync")({sigint: true});
+const basicSalary = prompt("Enter your basic salary: ");
+const benefits = prompt("Enter your benefits: ");
 function calculateNetSalary(basicSalary, benefits) {
     // Constants
     const NHIF_PERCENTAGE = 0.017;
@@ -43,9 +46,9 @@ function calculateNetSalary(basicSalary, benefits) {
     };
 }
 
-// Example usage:
-const basicSalary = 50000; // Example of a salary
-const benefits = 10000; // Example of some benefits
+// Call the calculateNetSalary function
+
+
 const salaryDetails = calculateNetSalary(basicSalary, benefits);
 console.log("Gross Salary:", salaryDetails.grossSalary);
 console.log("NHIF Deductions:", salaryDetails.NHIFDeductions);
